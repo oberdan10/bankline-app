@@ -20,6 +20,7 @@ import localePt from '@angular/common/locales/pt';
 
 //mascara
 import { CurrencyMaskModule } from "ng2-currency-mask";
+import { SpecialtyComponent } from './components/specialty/specialty.component';
 
 registerLocaleData(localePt);
 
@@ -28,7 +29,8 @@ registerLocaleData(localePt);
     AppComponent,
     MovementsListComponent,
     MovementsNewComponent,
-    AccountHolderComponent
+    AccountHolderComponent,
+    SpecialtyComponent
   ],
   imports: [
     FormsModule,

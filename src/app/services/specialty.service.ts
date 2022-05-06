@@ -7,15 +7,15 @@ const baseUrl = 'http://localhost:8080'
   providedIn: 'root'
 })
 
-export class AccountHolderService {
+export class SpecialtyService {
 
   constructor(private http: HttpClient) { }
-  
-  create(correntista:any): Observable<any> {
-    return this.http.post(`${baseUrl}/correntistas`,correntista);
+
+  create(especialidade:any): Observable<any> {
+    return this.http.post(`${baseUrl}/especialidades`,especialidade);
   }
   
   list(): Observable<any> {
-    return this.http.get(`${baseUrl}/correntistas`)
+    return this.http.get(`${baseUrl}/especialidades`)
   }
 }

@@ -11,9 +11,14 @@
       <div class="col-5">
         <input type="text"  class="form-control" id="iNome" [(ngModel)]="nome" placeholder="Nome do Correntista">
       </div>
-      <div class="col-5">
-        <input type="text"  class="form-control" id="iEspecialidade" [(ngModel)]="id_especialidade" placeholder="Especialidade do Correntista">
-      </div>
+
+      <div class="col-md-9">
+        <label for="iEspecialidade" class="form-label">Especialidade</label>
+        <select id="iEspecialidade" [(ngModel)]="especialidade" class="form-select">
+            <option *ngFor="let item of especialidades;" [ngValue]="item">{{ item.especialidade }}</option>
+          </select>
+    </div>
+
       <div class="col-3">
       <div class="d-grid gap-2 d-md-flex ">
           <button class="btn btn-outline-primary me-md-2" type="button" (click)="save()" >Gravar</button>
