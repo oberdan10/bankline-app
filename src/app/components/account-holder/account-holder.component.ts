@@ -11,6 +11,7 @@ export class AccountHolderComponent implements OnInit {
   correntistas:any;
   cpf:any;
   nome:any;
+  id_especialidade:any;
 
   constructor(private accountHolderService: AccountHolderService,) { }
 
@@ -32,7 +33,8 @@ export class AccountHolderComponent implements OnInit {
   save(): void {
     const correntista = {
       cpf:this.cpf,
-      nome:this.nome
+      nome:this.nome,
+      especialidade_id: parseInt(this.id_especialidade)
     };
     console.log(correntista);
     this.accountHolderService.create(correntista)
